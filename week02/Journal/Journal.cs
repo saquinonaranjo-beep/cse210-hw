@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+public class Journal
+{
+    private List<Entry> _entries = new List<Entry>();
+
+    // 1. Add Entry
+    public void AddEntry(Entry newEntry)
+    {
+        _entries.Add(newEntry);
+    }
+
+    // 2. Display All Entries
+    public void DisplayAll()
+    {
+        foreach (Entry entry in _entries)
+        {
+            entry.Display();
+        }
+    }
+
+    
+    public void SaveToFile(string file)
+    {
+        using (StreamWriter outputFile = new StreamWriter(file))
+        {
+            foreach (Entry entry in _entries)
+            {
+                outputFile.WriteLine($"{entry._date}|{entry._promptText}|{entry._entryText}");
+            }
+        }
+    }
+
+    
