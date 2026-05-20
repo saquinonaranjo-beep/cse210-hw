@@ -1,3 +1,10 @@
 using System;
-
-Console.WriteLine("Hello World! This is the ScriptureMemorizer Project.");
+using System.Data;
+class Program
+{
+    static  void Main(string[] args)
+    {
+        Word word = new Word("faith");
+        
+    }
+}
