@@ -20,7 +20,7 @@ class Program
             Console.Write("What would you like to do? ");
             string choice = Console.ReadLine();
 
-d
+
             if (choice == "1")
             {
                 string prompt = promptGenerator.GetRandomPrompt();
