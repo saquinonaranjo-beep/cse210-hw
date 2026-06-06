@@ -1,19 +1,33 @@
-public class BreathingActivity: Activity
+using System;
 
+public class BreathingActivity : Activity
+{
+    public BreathingActivity()
+        : base(
+            "Breathing",
+            "This activity will help you relax by walking you through breathing in and out slowly.")
     {
-        public void Run()
+    }
+
+    public void Run()
     {
         DisplayStartMessage();
-        
+
         int elapsedTime = 0;
+
         while (elapsedTime < _duration)
         {
-            Console.WriteLine("Breathe in...");
+            Console.Write("\nBreathe in... ");
             ShowCountdown(5);
-            Console.WriteLine("\nBreathe out...");
+
+            Console.Write("\nBreathe out... ");
             ShowCountdown(5);
+
+            Console.WriteLine();
+
             elapsedTime += 10;
         }
+
         DisplayEndMessage();
     }
-    }
+}
