@@ -1,3 +1,10 @@
 using System;
 
-Console.WriteLine("Hello World! This is the EternalQuest Project.");
+class Program
+{
+    static void Main(string[] args)
+    {
+        GoalManager manager = new GoalManager();
+        manager.Start();
+    }
+}
